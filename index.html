@@ -97,9 +97,36 @@
         <!-- Right elements -->
         <div class="d-flex align-items-center">
         <!-- Icon -->
-        <a class="text-reset me-3" href="#">
+        <!-- <a class="text-reset me-3" href="#">
             <i class="fas fa-camera fa-lg"></i>
-        </a>
+        </a> -->
+        <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+        <i class="fas fa-camera fa-lg"></i>
+        </button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="moda-title" id="exampleModalLabel">modal demo</h5>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="loadingmessage">unable to access video stream (please make sure you have a webcam enabled)</div>
+                        <canvas id="canvas" hidden></canvas>
+                        <div id="output" hidden>
+                            <div id="outputMessage">No QR code detected.</div>
+                            <div hidden>
+                                <b>Data:</b>
+                                <span id="outputData"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     <!-- Right elements -->
     </div>
@@ -139,11 +166,14 @@
                         </div>
                     </div>
                 </div>
-                <div id="loadingMessage">Unable to access video stream (please make sure you have a webcam enabled)</div>
+                <div id="loadingmessage">unable to access video stream (please make sure you have a webcam enabled)</div>
                 <canvas id="canvas" hidden></canvas>
                 <div id="output" hidden>
                     <div id="outputMessage">No QR code detected.</div>
-                    <div hidden><b>Data:</b> <span id="outputData"></span></div>
+                    <div hidden>
+                        <b>Data:</b>
+                        <span id="outputData"></span>
+                    </div>
                 </div>
             </div>
         </div>
