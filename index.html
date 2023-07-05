@@ -99,18 +99,18 @@
         <!-- <a class="text-reset me-3" href="#">
             <i class="fas fa-camera fa-lg"></i>
         </a> -->
-        <button type="button" class="btn btn-outline-dark" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+        <button type="button" id="modalbotton-camera" class="btn btn-outline-dark" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
         <i class="fas fa-camera fa-lg"></i>
         </button>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="moda-title" id="exampleModalLabel">modal demo</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="moda-title" id="exampleModalLabel">QR読み込み画面</h5>
+                        <button type="button" class="btn-close" id="modalbtn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        hogehoge</br>
+                        <!-- <span class="close">&times;</span> -->
                         <div id="loadingMessage">unable to access video stream (please make sure you have a webcam enabled)</div>
                         <canvas id="canvas" hidden></canvas>
                         <div id="output" hidden>
@@ -121,9 +121,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -133,43 +130,180 @@
     <!-- Container wrapper -->
     </nav>
     <!-- End your project here-->
-    <section class="py-4 px-4">
+    <section class="py-2 px-4">
         <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-md-9 col-sm-9">
-                <h3>subsection1</h3>
+
+                <h3 class="py-4">流体圏・宇宙圏科学</h3>
                 <div class="card">
                     <div class="card-body">
                         <p class="card-text">ここに適当にテキスト</p>
                     </div>
-                    <div class="accordion" id="accordionExample">
+                    <div class="accordion" id="accordion1">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading1-1">
                                 <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse1-1" aria-expanded="true" aria-control="collapse1-1">
-                                    huga1
+                                    太陽地球系物理学・宇宙地球電磁気学
                                 </button>
                             </h2>
-                        <div class="accordion-collapse collapse" id="collapse1-1" aria-labelledby="heading1-1" data-mdb-target="#accordionExample">
-                            <div class="accordion-body">
-                                <p>hogehoge hogehoge 研究室の紹介を書きたいね<p>
+                            <div class="accordion-collapse collapse" id="collapse1-1" aria-labelledby="heading1-1" data-mdb-target="#accordion1">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading1-2">
                                 <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse1-2" aria-expanded="true" aria-control="collapse1-2">
-                                    huga2
+                                    気象学・大気流体力学
                                 </button>
                             </h2>
-                        <div class="accordion-collapse collapse" id="collapse1-2" aria-labelledby="heading1-2" data-mdb-target="#accordionExample">
-                            <div class="accordion-body">
-                                <p>hogehoge hogehoge 研究室の紹介を書きたいね。</p>
+                            <div class="accordion-collapse collapse" id="collapse1-2" aria-labelledby="heading1-2" data-mdb-target="#accordion1">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <h3 class="py-4">固体地球惑星科学</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">hogehog</p>
+                    </div>
+                    <div class="accordion" id="accordion2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2-1">
+                                <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse2-1" aria-expanded="true" aria-control="collapse2-1">
+                                    内部ダイナミクス・深部物理
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse" id="collapse2-1" aria-labelledby="heading2-1" data-mdb-target="#accordion2">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2-2">
+                                <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse2-2" aria-expanded="true" aria-control="collapse2-2">
+                                    岩石循環
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse" id="collapse2-2" aria-labelledby="heading2-2" data-mdb-target="#accordion2">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2-3">
+                                <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse2-3" aria-expanded="true" aria-control="collapse2-3">
+                                    古環境
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse" id="collapse2-3" aria-labelledby="heading2-3" data-mdb-target="#accordion2">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2-4">
+                                <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse2-4" aria-expanded="true" aria-control="collapse2-4">
+                                    地球進化史
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse" id="collapse2-4" aria-labelledby="heading2-4" data-mdb-target="#accordion2">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2-5">
+                                <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse2-5" aria-expanded="true" aria-control="collapse2-5">
+                                    観測地震・火山
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse" id="collapse2-5" aria-labelledby="heading2-5" data-mdb-target="#accordion2">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> 
+
+                <h3 class="py-4">太陽惑星系物質科学</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">hogehog</p>
+                    </div>
+                    <div class="accordion" id="accordion3">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3-1">
+                                <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse3-1" aria-expanded="true" aria-control="collapse3-1">
+                                    有機宇宙地球化学
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse" id="collapse3-1" aria-labelledby="heading3-1" data-mdb-target="#accordion3">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3-2">
+                                <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse3-2" aria-expanded="true" aria-control="collapse3-2">
+                                    惑星系形成進化学
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse" id="collapse3-2" aria-labelledby="heading3-2" data-mdb-target="#accordion3">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3-3">
+                                <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse3-3" aria-expanded="true" aria-control="collapse3-3">
+                                    地球システム化学
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse" id="collapse3-3" aria-labelledby="heading3-3" data-mdb-target="#accordion3">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3-4">
+                                <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse3-4" aria-expanded="true" aria-control="collapse3-4">
+                                    地球内部物質学
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse" id="collapse3-4" aria-labelledby="heading3-4" data-mdb-target="#accordion3">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <figure id="chiwakufigure" style="display: none;">
+                    <img class="figure-img img-fluid" id="chiwakufigure" src="img/chiwaku_cf.ico"/>
+                </figure>
+
             </div>
         </div>
     </section>
     <script>
+        var modal = document.getElementById("exampleModal");
+        var openmodalbtn = document.getElementById("modalbotton-camera");
+        var closebtn = document.getElementById("modalbtn-close")
         var video = document.createElement("video");
         var canvasElement = document.getElementById("canvas");
         var canvas = canvasElement.getContext("2d");
@@ -177,6 +311,7 @@
         var outputContainer = document.getElementById("output");
         var outputMessage = document.getElementById("outputMessage");
         var outputData = document.getElementById("outputData");
+        var permissiongranted = false;
 
         function drawLine(begin, end, color) {
             canvas.beginPath();
@@ -188,12 +323,94 @@
         }
 
         // Use facingMode: environment to attemt to get the front camera on phones
-        navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream) {
-            video.srcObject = stream;
-            video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
-            video.play();
-            requestAnimationFrame(tick);
-        });
+        //navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+        //        .then(function(stream) {
+        //            video.srcObject = stream;
+        //            video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+        //            video.play();
+        //            requestAnimationFrame(tick);
+        //        });
+
+        openmodalbtn.onclick = function() {
+            modal.style.display = "block";
+            startCamera();
+        }
+
+        closebtn.onclick = function() {
+            modal.style.display = "none";
+            stopCamera();
+        }
+
+        window.onclick = function() {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                stopCamera();
+            }
+        }
+
+        function stopCamera() {
+            if (video.srcObject) {
+                video.pause();
+                video.srcObject.getTracks().forEach(function(track) {
+                    track.stop();
+                });
+                video.srcObject = null;
+                scanning = false;
+                closebtn.click();
+            }
+        }
+
+        function startCamera() {
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }})
+                .then(function(stream) {
+                    video.srcObject = stream;
+                    video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+                    video.play();
+                    scanning = true;
+                    requestAnimationFrame(tick);
+                })
+                .catch(function(error) {
+                    console.error(error);
+                });
+        }
+
+        //function requestcpermission() {
+        //    return new Promise(function(resolve, reject) {
+        //        navigator.permissions.query({ name: "camera" })
+        //            .then(function(permissiongranted){
+        //                if (permissionStatus.state == "granted") {
+        //                    resolve(true);
+        //                } else if (permissionStatus.state == "prompt") {
+        //                    navigator.mediaDevices.getUserMedia({ video: true })
+        //                        .then(function(stream) {
+        //                            stream.getTracks().forEach(function(track) {
+        //                                track.stop();
+        //                            });
+        //                            resolve(true);
+        //                        })
+        //                        .catch(function(error) {
+        //                            console.error(error);
+        //                            resolve(false);
+        //                        });
+        //                } else {
+        //                    resolve(false);
+        //                }
+        //            });
+        //    });
+        //}
+
+        //function startCamera() {
+        //    if (permissiongranted) {
+        //        requestcpermission().then(function(granted) {
+        //            if (granted) {
+        //                permissiongranted = true;
+        //                startCameraStream();
+        //            }
+        //        });
+        //    } else {
+        //        startCameraStream();
+        //    }
+        //}
 
         function tick() {
             loadingMessage.innerText = "Loading video..."
@@ -217,6 +434,8 @@
                     outputMessage.hidden = true;
                     outputData.parentElement.hidden = false;
                     outputData.innerText = code.data;
+                    stopCamera();
+                    qr2array();
                 } else {
                     outputMessage.hidden = false;
                     outputData.parentElement.hidden = true;
@@ -224,11 +443,21 @@
             }
             requestAnimationFrame(tick);
         }
+
+        var qrry = [];
+        var qrflag = false;
+        var epsfig = document.getElementById("chiwakufigure")
+
+        function qr2array(loadedtext) {
+            qrry.push(String(loadedtext));
+            if (qrry.includes("line")) {
+                //qrflag = true;
+                epsfig.style.display = "block";
+            }
+        }
     </script>
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Custom scripts -->
-    <script type="text/javascript"></script>
     <script src="js/jsQR.js"></script>
     </body>
 </html>
