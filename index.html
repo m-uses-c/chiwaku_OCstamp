@@ -294,7 +294,7 @@
                     </div>
                 </div>
                 <figure id="chiwakufigure" style="display: none;">
-                    <img class="figure-img img-fluid" id="chiwakufigure" src="img/chiwaku_cf.ico"/>
+                    <img class="figure-img img-fluid" src="img/chiwaku_cf.ico"/>
                 </figure>
 
             </div>
@@ -435,7 +435,7 @@
                     outputData.parentElement.hidden = false;
                     outputData.innerText = code.data;
                     stopCamera();
-                    qr2array();
+                    qr2array(code.data);
                 } else {
                     outputMessage.hidden = false;
                     outputData.parentElement.hidden = true;
@@ -450,7 +450,7 @@
 
         function qr2array(loadedtext) {
             qrry.push(String(loadedtext));
-            if (qrry.includes("line")) {
+            if (qrry.includes("hogehoge")) {
                 //qrflag = true;
                 epsfig.style.display = "block";
             }
