@@ -17,9 +17,16 @@
                 rel="stylesheet"
                 href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
                 />
+        <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic"
+                />
         <!-- MDB -->
         <link rel="stylesheet" href="css/mdb.min.css" />
         <style>
+        body {
+            font-family: 'Zen Maru Gothic';
+        }
         #githubLink {
             position: absolute;
             right: 0;
@@ -134,10 +141,10 @@
         <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-md-9 col-sm-9">
 
-                <h3 class="py-4">流体圏・宇宙圏科学</h3>
+                <h3 class="py-4" id="fluidspace">流体圏・宇宙圏科学</h3>
                 <div class="card">
                     <div class="card-body">
-                        <p class="card-text">ここに適当にテキスト</p>
+                        <p class="card-text">ここに適当にテキスト、Google siteの各研究室ページへのリンクを飛ばすといいかも？リンク集に全体の入り口は作っているけども。</p>
                     </div>
                     <div class="accordion" id="accordion1">
                         <div class="accordion-item">
@@ -167,10 +174,10 @@
                     </div>
                 </div>
 
-                <h3 class="py-4">固体地球惑星科学</h3>
+                <h3 class="py-4" id="solidearth">固体地球惑星科学</h3>
                 <div class="card">
                     <div class="card-body">
-                        <p class="card-text">hogehog</p>
+                        <p class="card-text">ここに適当にテキスト</p>
                     </div>
                     <div class="accordion" id="accordion2">
                         <div class="accordion-item">
@@ -237,7 +244,7 @@
                     </div>
                 </div> 
 
-                <h3 class="py-4">太陽惑星系物質科学</h3>
+                <h3 class="py-4" id="solarsystem">太陽惑星系物質科学</h3>
                 <div class="card">
                     <div class="card-body">
                         <p class="card-text">hogehog</p>
@@ -447,10 +454,13 @@
         var qrry = [];
         var qrflag = false;
         var epsfig = document.getElementById("chiwakufigure")
+        var group1 = document.getElementByID("fluidspace")
+        var group2 = document.getElementByID("solidearth")
+        var group3 = document.getElementByID("solarsystem")
 
         function qr2array(loadedtext) {
             qrry.push(String(loadedtext));
-            if (qrry.includes("hogehoge")) {
+            if (qrry.includes("hogehoge") && qrry.includes("hugahuga")) {
                 //qrflag = true;
                 epsfig.style.display = "block";
             }
