@@ -207,7 +207,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading2-3">
                                 <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse2-3" aria-expanded="true" aria-control="collapse2-3">
-                                    古環境
+                                    古環境 &nbsp;<div style="color:grey;">+ 古生物</div>
                                 </button>
                             </h2>
                             <div class="accordion-collapse collapse" id="collapse2-3" aria-labelledby="heading2-3" data-mdb-target="#accordion2">
@@ -454,15 +454,24 @@
         var qrry = [];
         var qrflag = false;
         var epsfig = document.getElementById("chiwakufigure")
-        var group1 = document.getElementByID("fluidspace")
-        var group2 = document.getElementByID("solidearth")
-        var group3 = document.getElementByID("solarsystem")
+        var group1 = document.getElementById("fluidspace")
+        var group2 = document.getElementById("solidearth")
+        var group3 = document.getElementById("solarsystem")
 
         function qr2array(loadedtext) {
             qrry.push(String(loadedtext));
-            if (qrry.includes("hogehoge") && qrry.includes("hugahuga")) {
+            if (qrry.includes("hogehoge") && qrry.includes("hugahuga") && qrry.includes("piyopiyo")) {
                 //qrflag = true;
                 epsfig.style.display = "block";
+            }
+            if (qrry.includes("hogehoge")) {
+                group1.style.color = "#0066CC";
+            }
+            if (qrry.includes("hugahuga")) {
+                group2.style.color = "#FF8548";
+            }
+            if (qrry.includes("piyopiyo")) {
+                group3.style.color = "#4C9900";
             }
         }
     </script>
