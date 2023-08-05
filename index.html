@@ -123,8 +123,6 @@
                         <div id="output" hidden>
                             <div id="outputMessage">No QR code detected.</div>
                             <div hidden>
-                                <b>Data:</b>
-                                <span id="outputData"></span>
                             </div>
                         </div>
                     </div>
@@ -460,17 +458,17 @@
 
         function qr2array(loadedtext) {
             qrry.push(String(loadedtext));
-            if (qrry.includes("hogehoge") && qrry.includes("hugahuga") && qrry.includes("piyopiyo")) {
+            if (qrry.includes("Earth") && qrry.includes("Planetary") && qrry.includes("Sciences")) {
                 //qrflag = true;
                 epsfig.style.display = "block";
             }
-            if (qrry.includes("hogehoge")) {
+            if (qrry.includes("Earth")) {
                 group1.style.color = "#0066CC";
             }
-            if (qrry.includes("hugahuga")) {
+            if (qrry.includes("Planetary")) {
                 group2.style.color = "#FF8548";
             }
-            if (qrry.includes("piyopiyo")) {
+            if (qrry.includes("Sciences")) {
                 group3.style.color = "#4C9900";
             }
         }
