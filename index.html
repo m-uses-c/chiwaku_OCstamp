@@ -138,7 +138,9 @@
         <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-md-9 col-sm-9">
 
-                <h3 class="py-4" id="fluidspace">流体圏・宇宙圏科学</h3>
+                <h3 class="py-4" id="fluidspace">流体圏・宇宙圏科学
+                    <img id="fs_i" style="display: none;" src="./img/weather_sunny.png" height="80px">
+                </h3>
                 <div class="card">
                     <div class="card-body">
                         <p class="card-text">太陽面から、地球の周りの磁気圏までの宇宙天気に関する研究や、地上から数百kmの高さまでの大気の循環、台風や大気海洋相互作用などの流体現象を研究できるグループです。</p>
@@ -177,7 +179,9 @@
                     </div>
                 </div>
 
-                <h3 class="py-4" id="solidearth">固体地球惑星科学</h3>
+                <h3 class="py-4" id="solidearth">固体地球惑星科学
+                    <img id="se_i" style="display: none;" src="./img/object_earth.png" height="80px">
+                </h3>
                 <div class="card">
                     <div class="card-body">
                         <p class="card-text">対象は地球の核から地表の岩石まで、地球で起きる幅広い現象を扱うことができます。地震や火山噴火などの現象を地球物理学的側面から扱うだけでなく、地球の46億年の歴史の中のイベントを解き明かすこともできます。</p>
@@ -256,7 +260,9 @@
                     </div>
                 </div> 
 
-                <h3 class="py-4" id="solarsystem">太陽惑星系物質科学</h3>
+                <h3 class="py-4" id="solarsystem">太陽惑星系物質科学
+                    <img id="ss_i" style="display: none;" src="./img/object_neptune.png" height="80px">
+                </h3>
                 <div class="card">
                     <div class="card-body">
                         <p class="card-text">地球内部の岩石から太陽系の隕石まで、主に実験や分析から物質科学的な進化の様子を調べることできます。</p>
@@ -473,8 +479,11 @@
         var qrflag = false;
         var epsfig = document.getElementById("chiwakufigure")
         var group1 = document.getElementById("fluidspace")
+        var icon1 = document.getElementById("fs_i")
         var group2 = document.getElementById("solidearth")
+        var icon2 = document.getElementById("se_i")
         var group3 = document.getElementById("solarsystem")
+        var icon3 = document.getElementById("ss_i")
 
         function qr2array(loadedtext) {
             qrry.push(String(loadedtext));
@@ -484,12 +493,15 @@
             }
             if (qrry.includes("Earth")) {
                 group1.style.color = "#0066CC";
+                icon1.style.display = "inline";
             }
             if (qrry.includes("Planetary")) {
                 group2.style.color = "#FF8548";
+                icon2.style.display = "inline";
             }
             if (qrry.includes("Sciences")) {
                 group3.style.color = "#4C9900";
+                icon3.style.display = "inline";
             }
         }
     </script>
